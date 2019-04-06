@@ -1,4 +1,4 @@
-const objTemp = {
+export const objTemp = {
     home : `<div class="conteiner">
     <h1 class="text-center"> Burger Queen </h1>
     
@@ -26,4 +26,4 @@ const objTemp = {
 </div>`
 
 }
-export {objTemp}
+ 
