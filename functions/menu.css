@@ -5,10 +5,12 @@ header label {
     float: right;
     margin: 6px 0;
     cursor: pointer;
+    padding: 25px;
+
 }
 .menu {
    position: absolute;
-   top: 50px;
+   top: 120px;
    left: 0;
    width: 100%;
    height: 100vh;
@@ -19,9 +21,9 @@ header label {
 .menu a{
     display: block;
     color: #ffffff;
-    height: 50px;
+    height: 100px;
     text-decoration: none;
-    padding: 15px;
+    padding: 35px;
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 .menu a:hover {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Karla|Montserrat|Righteous');
 @import url(menu.css);
 
 *{
@@ -7,15 +7,18 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Righteous', cursive;
     background: #0f0f0ff6;
     color: #fff;
-    display: flex;
+    /*display: flex;*/
     min-height: 100vh;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+
 }
 header {
     width:100%;
-    height: 50px;
+    height: 120px;
     background: #000000;
     color: #fff;
     position: fixed;
@@ -29,9 +32,24 @@ header {
 }
 h1 {
     float: left;
+    font-family: 'Righteous', cursive;
+    padding:23px 25px;
+    font-size: 60px;
+}
+h2 {
+ font-size: 140px;
+ font-family: 'Karla', sans-serif;
+}
+h3 {
+  text-align: right;
+
 }
 header .contenedor{
     display: table;
+}
+i{
+  font-size:24px;
+  color:#ffffff;
 }
 
 /*Slider*/
@@ -67,66 +85,24 @@ header .contenedor{
     position: relative;
     z-index:50;
 }
-
-
-
-
-
-
-
-/*#btn-menu{
-    display: none;
+/*Templates*/
+.conteiner{
+  position: sticky;
+  height: 328px;
+  left: 146px;
+  top: 80px;
+  padding: 8%;
 }
-header label {
-    display: none;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    border-right: 1px solid #fff; 
+/*Footer*/
+footer{
+  position: absolute;
+  width: 1038px;
+  height: 80px;
+  left: 0px;
+  top: 100%;
+  background: #000000;
 }
-header label:hover {
-    cursor: pointer;
-    background: #FFC700;
+.not-margin{
+  text-align: center;
+  padding: 20px;
 }
-
-.menu ul{
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-.menu li{
-    border-right: 1px solid rgb(78, 76, 76); 
-}
-.menu li :hover{
-    background: #FFC700;
-}
-.menu li a{
-    display: block;
-    padding: 15px 20px;
-    color:#fff;
-    text-decoration: none;
-}
-
-@media (max-width:768px) {
-    header label {
-       display: block;
-    }
-
-    .menu{
-        position: absolute;
-        width: 70%;
-    }
-
-    .menu ul{
-        flex-direction: column;
-    }
-
-    .menu li {
-        border-top: 1px solid  rgb(78, 76, 76);
-    }
-    #btn-menu:checked ˜ .menu {
-        margin: 0;
-    }
-
-}/*
