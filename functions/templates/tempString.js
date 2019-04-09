@@ -1,7 +1,12 @@
 export const objTemp = {
     home : `<div class="conteiner">
-    <h2 class="text-center"> Burger Queen </h2>
-    <p> s./15 ¡Oferta! </p>
+    <form>
+    <h5 class="text-center"> Cliente: </h5>
+    <input class="text-field "id="name" type="text" placeholder="nombre"> 
+    <br><br>
+    <input type="button" value="Pedido" >
+    </form>
+    <p> s./15 ¡Ofertas! </p>
     <ul class ="slider">
         <li>
             <input type="radio" id="sbutton1" name = "imagen1" checked>
@@ -23,24 +28,19 @@ export const objTemp = {
             <label for =""> </label>
             <img src="img/ima4.jpg" alt="">
         </li>
-    </ul>
-
-    
-
-    <button id="orden" class="btn"> Pedido </button> 
-    
+    </ul>    
 </div>`,
 
     desayuno : `<div class="conteiner">
-    <h2 class="text-center"> MENU </h2>  <h3> Desayunos </h3> <br>
-    <p> Café americano	----- s/.5 <br>
+    <h2 class="text-center"> MENU </h2>  
+    <input class="text-field "id="cliente" type="text">
+    <h3> Desayunos </h3> <br>
+    <button id="Café americano" class="btn"> Café americano ----- s/.5  </button>	<br>
         Café con leche	 -----s/.7 <br>
         Sandwich de jamón y queso	-----s./10 <br>
         Jugo de frutas natural     -----s/.7 <br>
     </p >
-    <button id="pedido" class="btn-orden"> Pedido </button> 
-
-
+    <button id="pedido" class="btn-orden"> Pedido </button>
 </div>`,
 
     menu: `<div class="conteiner">
