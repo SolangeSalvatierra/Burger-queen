@@ -5,10 +5,10 @@ export const home = () => {
     <div class="conteiner" id="inicio">
         <form>
         <h5 class="text-center"><strong> Cliente: </strong></h5>
-        <input "id="name" class="text-field  type="text" placeholder="Nombre del cliente">
-        <button id="btn-name"> Cliente </button> <br> <br>
-        <button id="desayuno">DESAYUNO</button> 
-        <button id="menu">MENU</button>
+        <input id="name" class="text-field"  type="text" placeholder="Nombre del cliente">
+        <button id="btn-name" type ="button"> Cliente </button> <br> <br>
+        <button id="desayuno" type ="button"> DESAYUNO </button> 
+        <button id="menu" type ="button"> MENU </button>
         </form>
         <p> s./15 ¡Ofertas! </p>
         <ul class ="slider">
@@ -36,5 +36,16 @@ export const home = () => {
     </div>
     `;
     inicio.innerHTML = template;
-        return inicio;
+
+   /*Funcion de Capturar, Almacenar datos y Limpiar campos*/
+    const btnEnviar = inicio.querySelector('#btn-name');
+    btnEnviar.addEventListener('click', () => {
+    /*Captura de datos escrito en los inputs*/ 
+    const nom =  document.getElementById ("name").value;
+    /*Guardando los datos en el LocalStorage*/
+    localStorage.setItem("Nombre",nom);
+    /*Limpiando los campos o inputs*/
+    document.getElementById("name").value = "";
+});
+return inicio;
 }

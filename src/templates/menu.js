@@ -25,5 +25,18 @@ export const menu = () => {
     `;
     const almuerzoYCena = document.createElement('div');
     almuerzoYCena.innerHTML = temMenu;
+
+    // /*Funcion de Capturar, Almacenar datos y Limpiar campos*/
+    // const btnEnviar = inicio.querySelector('#btn-name');
+    // btnEnviar.addEventListener('click', () => {
+    // /*Captura de datos escrito en los inputs*/ 
+    // const nom =  document.getElementById ("name").value;
+    // /*Guardando los datos en el LocalStorage*/
+    // localStorage.setItem("Nombre",nom);
+    // /*Limpiando los campos o inputs*/
+    // document.getElementById("name").value = "";
+
+
+
     return almuerzoYCena;
 }
