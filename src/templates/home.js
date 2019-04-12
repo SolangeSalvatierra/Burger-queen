@@ -1,3 +1,4 @@
+import {changeHash} from "../router.js";
 
 export const home = () => {
     const inicio = document.createElement('div');
@@ -37,7 +38,6 @@ export const home = () => {
     `;
     inicio.innerHTML = template;
 
-   /*Funcion de Capturar, Almacenar datos y Limpiar campos*/
     const btnEnviar = inicio.querySelector('#btn-name');
     btnEnviar.addEventListener('click', () => {
     /*Captura de datos escrito en los inputs*/ 
@@ -46,6 +46,17 @@ export const home = () => {
     localStorage.setItem("Nombre",nom);
     /*Limpiando los campos o inputs*/
     document.getElementById("name").value = "";
+
+/*traer template de desayuno*/
+const btnDesayuno = inicio.querySelector('#desayuno');
+btnDesayuno.addEventListener('click',() => {
+    changeHash ('/desayuno')
+});
+/*traer template de menu*/
+const btnMenu = inicio.querySelector('#menu');
+btnMenu.addEventListener('click',() => {
+    changeHash ('/menu')
+});
 });
 return inicio;
 }
