@@ -41,11 +41,11 @@ export const home = () => {
     const btnEnviar = inicio.querySelector('#btn-name');
     btnEnviar.addEventListener('click', () => {
     /*Captura de datos escrito en los inputs*/ 
-    const nom =  document.getElementById ("name").value;
+    const nom =  inicio.querySelector("#name").value;
     /*Guardando los datos en el LocalStorage*/
-    localStorage.setItem("Nombre",nom);
+    sessionStorage.setItem("Nombre",nom);
     /*Limpiando los campos o inputs*/
-    document.getElementById("name").value = "";
+    inicio.querySelector("#name").value = "";
 
 /*traer template de desayuno*/
 const btnDesayuno = inicio.querySelector('#desayuno');

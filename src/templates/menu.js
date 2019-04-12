@@ -1,7 +1,9 @@
 export const menu = () => {
+    const almuerzoYCena = document.createElement('div');
     const temMenu = `
     <div class="conteiner">
         <h2 class="text-center"> MENU </h2> <h3> Almuerzos </h3>
+        <input class="text-field "id="cliente" type="text">
         <h4> HAMBUERGUESAS </h4>
         <p> Hambuerguesas simples -----s/.10
         <br> Hamburguesas doble -----s/.15
@@ -23,20 +25,11 @@ export const menu = () => {
         <button id="pedidos" class="btn-orden"> Pedido </button>
     </div>
     `;
-    const almuerzoYCena = document.createElement('div');
     almuerzoYCena.innerHTML = temMenu;
 
-    // /*Funcion de Capturar, Almacenar datos y Limpiar campos*/
-    // const btnEnviar = inicio.querySelector('#btn-name');
-    // btnEnviar.addEventListener('click', () => {
-    // /*Captura de datos escrito en los inputs*/ 
-    // const nom =  document.getElementById ("name").value;
-    // /*Guardando los datos en el LocalStorage*/
-    // localStorage.setItem("Nombre",nom);
-    // /*Limpiando los campos o inputs*/
-    // document.getElementById("name").value = "";
-
-
-
+/*Obtener datos almacenados*/
+const nombre = sessionStorage.getItem("Nombre");
+/*Mostrar datos almacenados*/
+almuerzoYCena.querySelector("#cliente").value = nombre;
     return almuerzoYCena;
 }

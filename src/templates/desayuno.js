@@ -1,6 +1,5 @@
-import {home} from './home.js'
-
 export const desayuno = () => {
+    const breakfast =document.createElement('div');
     const temDesayuno = `
     <div class="conteiner">
         <h2 class="text-center"> MENU </h2>  
@@ -15,7 +14,10 @@ export const desayuno = () => {
     </div>
     `;
 
-const breakfast =document.createElement('div');
 breakfast.innerHTML= temDesayuno;
+/*Obtener datos almacenados*/
+const nombre = sessionStorage.getItem("Nombre");
+/*Mostrar datos almacenados*/
+breakfast.querySelector("#cliente").value = nombre;
 return breakfast
 };
