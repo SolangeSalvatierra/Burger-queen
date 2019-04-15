@@ -3,14 +3,25 @@ export const desayuno = () => {
     const temDesayuno = `
     <div class="conteiner">
         <h2 class="text-center"> MENU </h2>  
-        <input class="text-field "id="cliente" type="text">
+        <input class="text-field" id="cliente" type="text">
         <h3> Desayunos </h3> <br>
-        <button id="Café americano" class="btn"> Café americano ----- s/.5  </button>	<br>
-            Café con leche	 -----s/.7 <br>
-            Sandwich de jamón y queso	-----s./10 <br>
-            Jugo de frutas natural     -----s/.7 <br>
+        <p> Café americano ----- s/.5 
+        <a href="#home" > <img src="img/flecha-02.png" alt=""> </a>     
+        <input class="text" id="cantidad" type="text"> <input class="text" id="precios" type="text">              
+        </p>
+        <p> Café con leche -----s/.7  
+        <a href="#" > <img src="img/flecha-02.png" alt=""> </a> 
+        <input class="text" id="cantidad" type="text"> <input class="text" id="precios" type="text">
+        </p>
+        <p> Sandwich de jamón y queso	-----s./10 
+        <a href="#" > <img src="img/flecha-02.png" alt=""> </a> 
+        <input class="text" id="cantidad" type="text"> <input class="text" id="precios" type="text">
+        </p>
+        <p> Jugo de frutas natural     -----s/.7 
+        <a href="#" > <img src="img/flecha-02.png" alt=""> </a>
+        <input class="text" id="cantidad" type="text"> <input class="text" id="precios" type="text">
         </p >
-        <button id="pedido" class="btn-orden"> Pedido </button>
+        <button id="pedido" class="btn"> Pedido </button>
     </div>
     `;
 

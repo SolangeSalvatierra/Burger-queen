@@ -7,9 +7,9 @@ export const home = () => {
         <form>
         <h5 class="text-center"><strong> Cliente: </strong></h5>
         <input id="name" class="text-field"  type="text" placeholder="Nombre del cliente">
-        <button id="btn-name" type ="button"> Cliente </button> <br> <br>
-        <button id="desayuno" type ="button"> DESAYUNO </button> 
-        <button id="menu" type ="button"> MENU </button>
+        <button id="btn-name" type ="button" class= "btn"> Cliente </button> <br> <br>
+        <button id="desayuno" type ="button" class= "btn"> DESAYUNO </button> 
+        <button id="menu" type ="button" class= "btn"> MENU </button>
         </form>
         <p> s./15 ¡Ofertas! </p>
         <ul class ="slider">
