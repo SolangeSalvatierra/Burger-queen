@@ -142,8 +142,11 @@ i{
     width: 60px;
     height: 60px;
     font-size: 35px;
-    text-align: center;
-    
+    text-align: center; 
+}
+/*menu de desayuno*/
+.inline-block{
+    display: inline-block;
 }
 
 /*Footer*/
