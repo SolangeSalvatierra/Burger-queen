@@ -2,31 +2,35 @@ export const desayuno = () => {
     const breakfast =document.createElement('div');
     const temDesayuno = `
     <div class="conteiner">
-        <h2 class="text-center"> MENU </h2>  
+        <h2 class="inline"> MENU </h2> 
+        <h3 class="inline"> Desayunos </h3> <br>
         <input class="text-field" id="cliente" type="text">
-        <h3> Desayunos </h3> <br>
         <div class="conteiner">
-        <div class="inline-block">
-        <div id ="pedido1"> Café americano -----  </div> 
-        <div id= "precio1"> s/.5  </div> 
-        </div>
+        
+        <div id ="pedido1" class= "inline" > Café americano -----  </div> 
+        <div id="precio1" class= "inline" > s/.5  </div> 
         <img src="img/flecha-02.png" alt="" id="cafe-ame">      
-        <input class="text" id="cantidad" type="text"> <input class="text" id="precios" type="text">              
-
-        <div id="pedido2"> Café con leche ----- </div> 
-        <div id ="precio2"> s/.7 </div>  
+        <div class= "inline" > <input class="text" id="cantidad" type="text"> 
+        <input class="text" id="precios" type="text"> </div>              
+        <br>
+        <div id="pedido2" class= "inline" > Café con leche ----- </div> 
+        <div id ="precio2" class= "inline" > s/.7 </div>  
         <img src="img/flecha-02.png" alt=""  id="cafe-lech"> 
-        <input class="text" id="cantidad" type="text"> <input class="text" id="precios" type="text">
-        
-        <div id="pedido3"> Sandwich de jamón y queso ----- </div> 
-        <div id="precio3"> s./10 </div>
+        <div class= "inline"> <input class="text" id="cantidad" type="text"> 
+        <input class="text" id="precios" type="text"> </div>
+        <br>
+        <div id="pedido3" class= "inline" > Sandwich de jamón y queso ----- </div> 
+        <div id="precio3" class= "inline" > s./10 </div>
         <img src="img/flecha-02.png" alt=""  id="sand-jam"> 
-        <input class="text" id="cantidad" type="text"> <input class="text" id="precios" type="text">
-        
-        <div id="pedido4"> Jugo de frutas natural     ----- </div>
-        <div id="precio4"> s/.7 </div> 
+        <div class= "inline"> <input class="text" id="cantidad" type="text"> 
+        <input class="text" id="precios" type="text"> </div>
+        <br>
+        <div id="pedido4" class= "inline"> Jugo de frutas natural ----- </div>
+        <div id="precio4" class= "inline"> s/.7 </div> 
         <img src="img/flecha-02.png" alt=""  id="jugo"> 
-        <input class="text" id="cantidad" type="text"> <input class="text" id="precios" type="text">
+        <div class= "inline"> <input class="text" id="cantidad" type="text"> 
+        <input class="text" id="precios" type="text"> </div>
+        <br>
         </div>
         <button id="pedido" class="btn"> Pedido </button>
     </div>

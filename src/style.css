@@ -44,6 +44,7 @@ h2 {
 }
 h3 {
   text-align: right;
+  font-size: 55px;
 
 }
 h4 , h5 {
@@ -145,8 +146,12 @@ i{
     text-align: center; 
 }
 /*menu de desayuno*/
-.inline-block{
+.inline{
     display: inline-block;
+}
+
+.title{
+    justify-content: center;
 }
 
 /*Footer*/
