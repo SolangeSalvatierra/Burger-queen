@@ -35,11 +35,17 @@ export const desayuno = () => {
         <button id="pedido" class="btn"> Pedido </button>
     </div>
     `;
+    breakfast.innerHTML= temDesayuno;
+    /*Obtener datos almacenados*/
+    const nombre = sessionStorage.getItem("Nombre");
+    /*Mostrar datos almacenados*/
+    breakfast.querySelector("#cliente").value = nombre;
 
-breakfast.innerHTML= temDesayuno;
-/*Obtener datos almacenados*/
-const nombre = sessionStorage.getItem("Nombre");
-/*Mostrar datos almacenados*/
-breakfast.querySelector("#cliente").value = nombre;
-return breakfast
-};
+
+
+
+
+    
+    return breakfast
+    };
+
