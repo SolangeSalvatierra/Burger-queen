@@ -1,14 +1,19 @@
+export const obtenerData = (callback) =>
+    firebase.firestore().collection('desayuno')
+    .onSnapshot((querySnapshot) => {
+        const arrDesayuno = []; 
+        querySnapshot.forEach((doc) => {
+          arrDesayuno.push({id: doc.id, ...doc.data()})
+        });
+        callback(arrDesayuno)
+    });
 
-
-
-  
-  
-//   // Initialize Cloud Firestore through Firebase
-//   var db = firebase.firestore();
-//   //leer documentos
-//   db.collection("desayuno").get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//         console.log(`${doc.id} => ${doc.data().pedido}`);
-//     });
-// });
-
+    export const obtenerMenu = (callback) =>
+    firebase.firestore().collection('menú')
+    .onSnapshot((querySnapshot) => {
+        const arrMenu = []; 
+        querySnapshot.forEach((doc) => {
+          arrMenu.push({id: doc.id, ...doc.data()})
+        });
+        callback(arrMenu)
+    });
