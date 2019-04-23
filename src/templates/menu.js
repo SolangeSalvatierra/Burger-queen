@@ -1,4 +1,4 @@
-import {obtenerMenu} from '../controller/controller-firebase.js';
+import {obtenerMenu,guardarPedidos} from '../controller/controller-firebase.js';
 
 export const menu = () => {
     const almuerzoYCena = document.createElement('div');
@@ -30,7 +30,7 @@ export const itemsMenu = (data) => {
         <div id="menu">
             <ul>
             <li id="text-${doc.pedido}">${doc.pedido} ----- s/. ${doc.precio}
-            <img src="img/flecha-02.png" alt=""  id="cafe-lech"> 
+            <img src="img/flecha-02.png" alt=""  id="orden"> 
             <div class= "inline"> <input class="text" id="cantidad" type="text"> 
             <input class="text" id="precios" type="text"> </div>  </li>
             </ul>
