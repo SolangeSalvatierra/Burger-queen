@@ -8,6 +8,9 @@ export const obtenerData = (callback) =>
         callback(arrDesayuno)
     });
 
+
+    /*Guarda el Pedido en Firebase */
+
     export const guardarPedidos = () => { 
         return firebase.firestore().collection('desayuno').add({
         cliente:"Carlos",
@@ -34,3 +37,5 @@ export const obtenerData = (callback) =>
         callback(arrMenu)
     });
 
+
+   
