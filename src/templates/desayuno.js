@@ -68,12 +68,17 @@ export const itemsDesayuno = (data) => {
         const cantidad = document.querySelectorAll('.text-cantidad');
         const btnOrden = contenedorListaDesayuno.querySelectorAll('.btn-orden');
     
+
+    const arrObj = [];
+
     btnOrden.forEach((btn,i) => {
         btn.addEventListener ('click', () => {
         const idDeProducto = btn.dataset.id;
+
         /* crear variable para seleccionar el primer element que se le haga click 
         y se le iguala con el id de cada producto */ 
-       const productoSeleccionado = data.find ((element) => element.id === idDeProducto)
+       const productoSeleccionado = data.find ((element) => element.id === idDeProducto) 
+       arrObj.push(productoSeleccionado);
 
         /*variables para guardar cantidad, precio*/
        productoSeleccionado.cantidad = productoSeleccionado.cantidad + 1;
@@ -81,8 +86,8 @@ export const itemsDesayuno = (data) => {
 
        cantidad[i].value = productoSeleccionado.cantidad;
        precio[i].value = productoSeleccionado.precio;
-        console.log(productoSeleccionado)
-
+        // console.log(productoSeleccionado)
+        console.log(arrObj)
         /*total*/
 
 
