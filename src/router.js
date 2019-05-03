@@ -2,6 +2,7 @@ import {home} from './templates/home.js';
 import {desayuno} from './templates/desayuno.js';
 import {menu} from './templates/menu.js';
 import {navHome} from './templates/header.js';
+
 export const changeHash = (nameHash) => {
     window.location.hash = nameHash;
 }

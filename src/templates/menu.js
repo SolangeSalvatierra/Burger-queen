@@ -1,4 +1,4 @@
-import {obtenerMenu,guardarPedidos} from '../controller/controller-firebase.js';
+import {obtenerMenu,mandarPedidos} from '../controller/controller-firebase.js';
 
 export const menu = () => {
     const almuerzoYCena = document.createElement('div');

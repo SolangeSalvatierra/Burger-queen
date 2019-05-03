@@ -3,9 +3,9 @@
 }
 header label {
     float: right;
-    margin: 10px 0;
+    margin: 0px 15px 10px 50px;
     cursor: pointer;
-    padding: 25px;
+    padding: 0px 12px 50px 25px;
 
 }
 .menu {
