@@ -1,30 +1,34 @@
-export const navHome = () =>{
-      //Carga de Headerhome
-const header = document.createElement ('div');
+export const navHome = () =>{const header = document.createElement ('div');
 const temHeader = `
-<header>
-    <!-- <img src="img/logo.png" alt=""> -->
-          <div class = "contenedor">
-            <h1 class="burguer">Burguer Queen </h1>
-            <input type="checkbox" id="menu-bar">
-            <label class="icon-menu" for="menu-bar"> <img src="img/line_weight_white_54x54.png" alt=""> 
-            </label>
-              <nav class="menu">
-                  <a href="#/"><i class='fas fa-home'></i> Inicio </a>
-                  <a href="#/desayuno"><i class='fas fa-coffee'></i>  Desayunos</a>
-                  <a href="#/menu"> <i class="fa fa-cutlery"></i> Menu</a> 
-              </nav>
+<header class="container-lg-fluid">
+        <div class="container-lg-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark"" class="chuleta"> 
+            <a class="navbar-brand" href="#">BURGER QUEEN</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#/">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#/desayuno">DESAYUNO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#/menu">MENU</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
           </div>
-          </header>
-
-          <footer class="footer">
-          <div class="background color flex padding">
-            <p class="not-margin">Creado por @Solange</p>
-          </div>
-        </footer>
+    </header>
+  <footer class="page-footer font-small dark bg-dark  text-center  py-2"> 
+  <div class="footer-copyright text-white">
+     Creado por @Solange 
+  </div>
+  </footer>
     `;
 header.innerHTML = temHeader;
-
-//Inicio
 return header;
 }

@@ -35,20 +35,34 @@
            console.error("Error adding document: ",error);
        });
     };
+/*Guarda nombre del cliente en un array*/
+let arr = [];
+export const nombreClienteArr = () => {
+    const name = document.querySelector('#name').value;    
+    const nombre = document.querySelector('#cliente'); 
+    arr.push(name)
+    console.log(arr)
+    nombre.innerHTML = name; 
+  }
 
- const arrObj = [];
 /*Guarda orden en un array*/
-    export const arrPedidos = (objeto) => {
-        const objArr = arr.find(obj => obj.id === objeto.id)
-        if(objArr === undefined){
-         objeto.cantidad = 1
-         arr.push(objeto)  
-        } else {
-        objeto.cantidad += 1
-        }
-         console.log(arrObj)
-    return arrObj
-  };
+export const arrPedidos = (objeto) => {
+    arr.push(objeto)
+  console.log(arr)
+  return arr
+ }
+
+  //   export const arrPedidos = (objeto) => {
+  //       const objArr = arr.find(obj => obj.id === objeto.id)
+  //       if(objArr === undefined){
+  //        objeto.cantidad = 1
+  //        arr.push(objeto)  
+  //       } else {
+  //       objeto.cantidad += 1
+  //       }
+  //        console.log(arr)
+  //   return arr;
+  // };
 
 
    

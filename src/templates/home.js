@@ -5,35 +5,56 @@ export const home = () => {
     const template = `
     <div class="conteiner" id="inicio">
         <form>
-        <h5 class="text-center"><strong> Cliente: </strong></h5>
-        <input id="name" class="text-field"  type="text" placeholder="Nombre del cliente">
-        <button id="btn-name" type ="button" class= "btn"> Cliente </button> <br> <br>
-        <button id="desayuno" type ="button" class= "btn"> DESAYUNO </button> 
-        <button id="menu" type ="button" class= "btn"> MENU </button>
-        </form>
+        <div class="col-md-4 mb-3">
+        <input id="name" class="form-control" type="text" placeholder="Nombre del cliente">
+        <button id="btn-name" type ="button" class="btn btn-danger my-3"> Cliente </button> 
+        </div>
         <p> s./15 ¡Ofertas! </p>
-        <ul class ="slider">
-            <li>
-                <input type="radio" id="sbutton1" name = "imagen1" checked>
-                <label for =""> </label>
-                <img src="img/ima1.jpg" alt="">
-            </li>    
-            <li>
-                <input type="radio" id="sbutton2" name = "imagen2">
-                <label for =""> </label>
-                <img src="img/ima2.jpg" alt="">
-            </li>
-            <li>
-                <input type="radio" id="sbutton3" name = "imagen3">
-                <label for =""> </label>
-                <img src="img/ima3.jpg" alt="">
-            </li> 
-            <li>
-                <input type="radio" id="sbutton4" name = "imagen4">
-                <label for =""> </label>
-                <img src="img/ima4.jpg" alt="">
-            </li>
-        </ul>    
+        <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/ima1.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/ima4.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/ima3.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div class="col-md-4 mb-3">
+        <div class = " botones ">
+        <button type ="button" id="desayuno"  class= "btn btn-warning  btn-lg my-3"> DESAYUNO </button> 
+        <button type ="button" id="menu"  class= "btn btn-warning  btn-lg" my-3> MENU </button>
+        </div>
+        </form>
+      </div>
     </div>
     `;
     inicio.innerHTML = template;
