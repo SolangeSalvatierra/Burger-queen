@@ -1,7 +1,7 @@
 import {obtenerData, mandarPedidos, arrPedidos} from '../controller/controller-firebase.js';
 import { orderDesayuno } from '../templates/ordenDesayuno.js';
 
-export const desayuno = () => {
+export const desayuno = (data) => {
     const breakfast = document.createElement('div');
     const temDesayuno = `
     <section id="ordenProductos" class="orden-productos">
@@ -16,6 +16,7 @@ export const desayuno = () => {
         </tr>
         </thead>
         <tbody id= "tabla">
+
         </tbody>
         </table>
         <h4> Total :  <input class="total" type="number"> </h4>
@@ -54,7 +55,7 @@ export const itemsDesayuno = (data) => {
         <div id="desayuno">
             <ul>
             <li id="text-${doc.pedido}"> ${doc.pedido} ----- s/. ${doc.precio}
-            <img src="img/flecha-02.png" alt=""  class="btn-orden" data-id="${doc.id}"> 
+            <img src="img/flecha-02.png" alt=""  class="btn-orden" id='btnOrden-${doc.id}' data-id="${doc.id}"> 
             </li>
             </ul>
         </div>
@@ -65,48 +66,17 @@ export const itemsDesayuno = (data) => {
     // debugger;
     const contenedorListaDesayuno = document.getElementById('enviarPedido');
     contenedorListaDesayuno.innerHTML= listDesayunos; 
-
+   /*pushea pedido en un array*/
     const btnOrden = contenedorListaDesayuno.querySelectorAll('.btn-orden');
+    btnOrden.forEach((btn,i) => {
+    btn.addEventListener ('click', () => {
+    const idDeProducto = btn.dataset.id;
+    const productoSeleccionado = data.find ((element) => element.id === idDeProducto) 
+    productoSeleccionado.cantidad = productoSeleccionado.cantidad + 1;
+    productoSeleccionado.precio = productoSeleccionado.precio * productoSeleccionado.cantidad;
+    arrPedidos(productoSeleccionado);
+        });
+    });
+};
 
 
-
-    // const pedidoAgregado = document.getElementById('tabla')
-
-    // const btnOrden = contenedorListaDesayuno.querySelectorAll('.btn-orden');
-    // btnOrden.forEach((btn,i) => {
-    // const idDeProducto = btn.dataset.id;
-    // btn.addEventListener ('click',() => {
-    //     console.log(btn)
-    //     // pedidoAgregado.innerHTML= ''
-    //     // let sumaTotal=0
-    //     // arrPedidos(btn.dataset.id)
-    //     arrPedidos();
-    // });
-    
-//      /*Mostrando precio*/
-//         const precio = document.querySelectorAll('.text-precio');
-//         const cantidad = document.querySelectorAll('.text-cantidad');
-//         const btnPrecioTotal = document.querySelector('.text-total');
-    
-//     const btnOrden = contenedorListaDesayuno.querySelectorAll('.btn-orden');
-//     const arrObj = [];
-//     btnOrden.forEach((btn,i) => {
-//     btn.addEventListener ('click', () => {
-//     const idDeProducto = btn.dataset.id;
-// /* crear variable para seleccionar el primer element que se le haga click 
-// y se le iguala con el id de cada producto */ 
-//     const productoSeleccionado = data.find ((element) => element.id === idDeProducto) 
-//     arrObj.push(productoSeleccionado);
-
-//         /*variables para guardar cantidad, precio*/
-//        productoSeleccionado.cantidad = productoSeleccionado.cantidad + 1;
-//        productoSeleccionado.precio = productoSeleccionado.precio * productoSeleccionado.cantidad;
-
-//        cantidad[i].value = productoSeleccionado.cantidad;
-//        precio[i].value = productoSeleccionado.precio;
-//         // console.log(productoSeleccionado)
-//  console.log(arrObj)
-
-        };
-    /*)*/
-// };
