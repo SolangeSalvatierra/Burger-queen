@@ -35,6 +35,7 @@
            console.error("Error adding document: ",error);
        });
     };
+
 /*Guarda nombre del cliente en un array*/
 let arr = [];
 export const nombreClienteArr = () => {
@@ -45,13 +46,7 @@ export const nombreClienteArr = () => {
     nombre.innerHTML = name; 
   }
 
-// /*Guarda orden en un array*/
-// export const arrPedidos = (objeto) => {
-//     arr.push(objeto)
-//   console.log(arr)
-//   return arr
-//  }
-
+ /*Guarda orden en un array*/
     export const arrPedidos = (objeto) => {
         const objArr = arr.find(obj => obj.id === objeto.id)
         if(objArr === undefined){
@@ -60,7 +55,7 @@ export const nombreClienteArr = () => {
         } else {
         objeto.cantidad 
         }
-         console.log(arr)
+     console.log(arr)
     return arr;
   };
 

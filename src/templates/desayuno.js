@@ -1,7 +1,7 @@
 import {obtenerData, mandarPedidos, arrPedidos} from '../controller/controller-firebase.js';
 import { orderDesayuno } from '../templates/ordenDesayuno.js';
 
-export const desayuno = (data) => {
+export const desayuno = () => {
     const breakfast = document.createElement('div');
     const temDesayuno = `
     <section id="ordenProductos" class="orden-productos">
@@ -24,7 +24,7 @@ export const desayuno = (data) => {
         <br> <br>
         <button id="pedido" type="button" class="btn btn-warning  btn-lg"> Pedido </button>
     </section>
-    
+
     <section id="titulo" class="pedidos">
     <h2 class=""> MENU </h2> 
     <h3 class=""> Desayunos </h3> <br>
@@ -66,16 +66,25 @@ export const itemsDesayuno = (data) => {
     // debugger;
     const contenedorListaDesayuno = document.getElementById('enviarPedido');
     contenedorListaDesayuno.innerHTML= listDesayunos; 
-   /*pushea pedido en un array*/
+   
+    const pedidoAgregado = document.getElementById('tabla');
+   
+   
+    /*pushea pedido en un array*/
     const btnOrden = contenedorListaDesayuno.querySelectorAll('.btn-orden');
+    pedidoAgregado.innerHTML ='';
+
     btnOrden.forEach((btn,i) => {
     btn.addEventListener ('click', () => {
     const idDeProducto = btn.dataset.id;
     const productoSeleccionado = data.find ((element) => element.id === idDeProducto) 
     productoSeleccionado.cantidad = productoSeleccionado.cantidad + 1;
     productoSeleccionado.precio = productoSeleccionado.precio * productoSeleccionado.cantidad;
+
+    pedidoAgregado.appendChild(orderDesayuno(productoSeleccionado)) ;
     arrPedidos(productoSeleccionado);
         });
+
     });
 };
 

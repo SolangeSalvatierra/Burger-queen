@@ -1,4 +1,6 @@
+
 export const orderDesayuno = (objOrder) => {
+    // console.log(objOrder)
     const trElement = document.createElement('div');
     trElement.innerHTML=`
       <td>${objOrder.cantidad}</td>
