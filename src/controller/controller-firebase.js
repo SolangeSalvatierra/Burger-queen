@@ -55,9 +55,12 @@ export const nombreClienteArr = () => {
         } else {
         objeto.cantidad 
         }
-     console.log(arr)
+    //  console.log(arr)
     return arr;
   };
+
+   /*Cantidad de productos*/
+   
 
 
    

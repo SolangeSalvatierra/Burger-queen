@@ -43,24 +43,25 @@ i{
 }
 /* Primera sección */
 .pedidos{
-    width: 60%;
-    display: grid;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 200px 50px;
+  display: grid;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 200px 50px;
+  width: 60%;
   }
 /* Segunda sección */
 .orden-productos{
-  width: 40%;
   background-color: #0f0f0ff6;
-  color: #FFFFFF;
-  position: absolute;
-  height: 149.5%;
-  left: 60%;
-  top: 5%;
-  padding: 2%;
-  /* margin: 40px 0px; */
-  }
+    color: #FFFFFF;
+    position: fixed;
+    height: 100%;
+    left: 60%;
+    top: 5%;
+    padding: 2%;
+    /* margin: 40px 0px; */
+    display: table-row;
+    width: 40%;
+}
   
   .orden-productos h1, .orden-productos h2, .orden-productos h3{
     margin: 0%
@@ -74,7 +75,11 @@ i{
     padding: 10px;
     background-color: #3C3838
   }
-
+  .table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
   
   /* .numero-orden{
     font-size: 20px;

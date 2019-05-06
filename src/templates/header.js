@@ -9,9 +9,6 @@ const temHeader = `
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#/">HOME<span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#/desayuno">DESAYUNO</a>
                 </li>
@@ -24,7 +21,7 @@ const temHeader = `
           </div>
     </header>
   <footer class="page-footer font-small dark bg-dark  text-center  py-2"> 
-  <div class="footer-copyright text-white">
+  <div class="footer-copyright text-white foooter">
      Creado por @Solange 
   </div>
   </footer>
